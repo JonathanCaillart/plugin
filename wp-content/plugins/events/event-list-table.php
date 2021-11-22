@@ -2,6 +2,20 @@
 
 class ReservationListTable extends WP_List_Table {
 
+    function column_id($item)
+    {
+
+		$actions = array(
+			'edit' => sprintf('<a href="?page=reservation&id=%s">%s</a>', $item['id'], 'Modifier'),
+		);
+
+		return sprintf('%s %s', 
+            $item['id'],
+            $this -> row_actions($actions)
+		);
+
+	}
+
     public function prepare_items()
     {
         $columns = $this->get_columns();
@@ -12,6 +26,7 @@ class ReservationListTable extends WP_List_Table {
         $this->_column_headers = array($columns, $hidden, $sortable);
         $this->items = $data;
     }
+
 
     public function get_columns()
     {

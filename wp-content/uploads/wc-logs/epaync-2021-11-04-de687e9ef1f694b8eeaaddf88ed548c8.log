@@ -1,0 +1,230 @@
+11-04-2021 @ 23:16:48 - Generating payment form for order #86.
+11-04-2021 @ 23:16:48 - Data to be sent to payment gateway : Array
+(
+    [signature] => NitCMEr/kkt5TL8hc+GmdzYz4aheVLa9f19a0utiWcc=
+    [vads_action_mode] => INTERACTIVE
+    [vads_amount] => 15
+    [vads_capture_delay] => 
+    [vads_contrib] => WooCommerce_2.x-5.x_1.9.4/5.8.1_5.8.0/8.0.1
+    [vads_ctx_mode] => TEST
+    [vads_currency] => 953
+    [vads_cust_address] => test
+    [vads_cust_city] => test
+    [vads_cust_country] => NC
+    [vads_cust_email] => j.caillart@cci-formation.nc
+    [vads_cust_first_name] => test
+    [vads_cust_id] => 1
+    [vads_cust_last_name] => test
+    [vads_cust_phone] => 444444
+    [vads_cust_state] => test
+    [vads_cust_zip] => TEST
+    [vads_language] => fr
+    [vads_order_id] => 86
+    [vads_page_action] => PAYMENT
+    [vads_payment_cards] => 
+    [vads_payment_config] => SINGLE
+    [vads_return_mode] => GET
+    [vads_ship_to_city] => 
+    [vads_ship_to_country] => 
+    [vads_ship_to_first_name] => 
+    [vads_ship_to_last_name] => 
+    [vads_ship_to_state] => 
+    [vads_ship_to_street] => 
+    [vads_ship_to_street2] => 
+    [vads_ship_to_zip] => 
+    [vads_shipping_amount] => 0
+    [vads_site_id] => 12345678
+    [vads_totalamount_vat] => 0
+    [vads_trans_date] => 20211104221648
+    [vads_trans_id] => 802088
+    [vads_url_return] => http://localhost/plugin/?wc-api=WC_Gateway_Epaync
+    [vads_validation_mode] => 
+    [vads_version] => V2
+    [vads_ext_info_order_key] => wc_order_C4DXgkEbZrFOQ
+    [vads_ext_info_blog_id] => 0
+)
+
+11-04-2021 @ 23:17:52 - Generating payment form for order #87.
+11-04-2021 @ 23:17:52 - Data to be sent to payment gateway : Array
+(
+    [signature] => kTwZz4B5DEfWGZibvMMgDaYwHF6jauqposGo+974AkI=
+    [vads_action_mode] => INTERACTIVE
+    [vads_amount] => 30
+    [vads_capture_delay] => 
+    [vads_contrib] => WooCommerce_2.x-5.x_1.9.4/5.8.1_5.8.0/8.0.1
+    [vads_ctx_mode] => TEST
+    [vads_currency] => 953
+    [vads_cust_address] => test
+    [vads_cust_city] => test
+    [vads_cust_country] => NC
+    [vads_cust_email] => j.caillart@cci-formation.nc
+    [vads_cust_first_name] => test
+    [vads_cust_id] => 1
+    [vads_cust_last_name] => test
+    [vads_cust_phone] => 444444
+    [vads_cust_state] => test
+    [vads_cust_zip] => TEST
+    [vads_language] => fr
+    [vads_order_id] => 87
+    [vads_page_action] => PAYMENT
+    [vads_payment_cards] => 
+    [vads_payment_config] => SINGLE
+    [vads_return_mode] => GET
+    [vads_ship_to_city] => 
+    [vads_ship_to_country] => 
+    [vads_ship_to_first_name] => 
+    [vads_ship_to_last_name] => 
+    [vads_ship_to_state] => 
+    [vads_ship_to_street] => 
+    [vads_ship_to_street2] => 
+    [vads_ship_to_zip] => 
+    [vads_shipping_amount] => 0
+    [vads_site_id] => 12345678
+    [vads_totalamount_vat] => 0
+    [vads_trans_date] => 20211104221752
+    [vads_trans_id] => 802726
+    [vads_url_return] => http://localhost/plugin/?wc-api=WC_Gateway_Epaync
+    [vads_validation_mode] => 
+    [vads_version] => V2
+    [vads_ext_info_order_key] => wc_order_AHfc7M3aZQsud
+    [vads_ext_info_blog_id] => 0
+)
+
+11-04-2021 @ 23:19:51 - Generating payment form for order #87.
+11-04-2021 @ 23:19:51 - Data to be sent to payment gateway : Array
+(
+    [signature] => NeGiPVJGH29CrJ2HBNB4mak1TQFqouRAL3uEzwDJpG0=
+    [vads_action_mode] => INTERACTIVE
+    [vads_amount] => 30
+    [vads_capture_delay] => 
+    [vads_contrib] => WooCommerce_2.x-5.x_1.9.4/5.8.1_5.8.0/8.0.1
+    [vads_ctx_mode] => TEST
+    [vads_currency] => 953
+    [vads_cust_address] => test
+    [vads_cust_city] => test
+    [vads_cust_country] => NC
+    [vads_cust_email] => j.caillart@cci-formation.nc
+    [vads_cust_first_name] => test
+    [vads_cust_id] => 1
+    [vads_cust_last_name] => test
+    [vads_cust_phone] => 444444
+    [vads_cust_state] => test
+    [vads_cust_zip] => TEST
+    [vads_language] => fr
+    [vads_order_id] => 87
+    [vads_page_action] => PAYMENT
+    [vads_payment_cards] => 
+    [vads_payment_config] => SINGLE
+    [vads_return_mode] => GET
+    [vads_ship_to_city] => 
+    [vads_ship_to_country] => 
+    [vads_ship_to_first_name] => 
+    [vads_ship_to_last_name] => 
+    [vads_ship_to_state] => 
+    [vads_ship_to_street] => 
+    [vads_ship_to_street2] => 
+    [vads_ship_to_zip] => 
+    [vads_shipping_amount] => 0
+    [vads_site_id] => 15578053
+    [vads_totalamount_vat] => 0
+    [vads_trans_date] => 20211104221951
+    [vads_trans_id] => 803918
+    [vads_url_return] => http://localhost/plugin/?wc-api=WC_Gateway_Epaync
+    [vads_validation_mode] => 
+    [vads_version] => V2
+    [vads_ext_info_order_key] => wc_order_AHfc7M3aZQsud
+    [vads_ext_info_blog_id] => 0
+)
+
+11-04-2021 @ 23:21:26 - Generating payment form for order #87.
+11-04-2021 @ 23:21:26 - Data to be sent to payment gateway : Array
+(
+    [signature] => NFMWZKkMDPBkfRy2stKjEZRJ6HZ6ZPnW4a02JoaBR6Q=
+    [vads_action_mode] => INTERACTIVE
+    [vads_amount] => 30
+    [vads_capture_delay] => 
+    [vads_contrib] => WooCommerce_2.x-5.x_1.9.4/5.8.1_5.8.0/8.0.1
+    [vads_ctx_mode] => TEST
+    [vads_currency] => 953
+    [vads_cust_address] => test
+    [vads_cust_city] => test
+    [vads_cust_country] => NC
+    [vads_cust_email] => j.caillart@cci-formation.nc
+    [vads_cust_first_name] => test
+    [vads_cust_id] => 1
+    [vads_cust_last_name] => test
+    [vads_cust_phone] => 444444
+    [vads_cust_state] => test
+    [vads_cust_zip] => TEST
+    [vads_language] => fr
+    [vads_order_id] => 87
+    [vads_page_action] => PAYMENT
+    [vads_payment_cards] => 
+    [vads_payment_config] => SINGLE
+    [vads_return_mode] => GET
+    [vads_ship_to_city] => 
+    [vads_ship_to_country] => 
+    [vads_ship_to_first_name] => 
+    [vads_ship_to_last_name] => 
+    [vads_ship_to_state] => 
+    [vads_ship_to_street] => 
+    [vads_ship_to_street2] => 
+    [vads_ship_to_zip] => 
+    [vads_shipping_amount] => 0
+    [vads_site_id] => 15578053
+    [vads_totalamount_vat] => 0
+    [vads_trans_date] => 20211104222125
+    [vads_trans_id] => 804859
+    [vads_url_return] => http://localhost/plugin/?wc-api=WC_Gateway_Epaync
+    [vads_validation_mode] => 
+    [vads_version] => V2
+    [vads_ext_info_order_key] => wc_order_AHfc7M3aZQsud
+    [vads_ext_info_blog_id] => 0
+)
+
+11-04-2021 @ 23:24:49 - Generating payment form for order #87.
+11-04-2021 @ 23:24:49 - Data to be sent to payment gateway : Array
+(
+    [signature] => tIrIkUFi0EiVmYfHSkVOGrx4Uj08NrV3nkf8B22Xd9I=
+    [vads_action_mode] => INTERACTIVE
+    [vads_amount] => 30
+    [vads_capture_delay] => 
+    [vads_contrib] => WooCommerce_2.x-5.x_1.9.4/5.8.1_5.8.0/8.0.1
+    [vads_ctx_mode] => TEST
+    [vads_currency] => 953
+    [vads_cust_address] => test
+    [vads_cust_city] => test
+    [vads_cust_country] => NC
+    [vads_cust_email] => j.caillart@cci-formation.nc
+    [vads_cust_first_name] => test
+    [vads_cust_id] => 1
+    [vads_cust_last_name] => test
+    [vads_cust_phone] => 444444
+    [vads_cust_state] => test
+    [vads_cust_zip] => TEST
+    [vads_language] => fr
+    [vads_order_id] => 87
+    [vads_page_action] => PAYMENT
+    [vads_payment_cards] => 
+    [vads_payment_config] => SINGLE
+    [vads_return_mode] => GET
+    [vads_ship_to_city] => 
+    [vads_ship_to_country] => 
+    [vads_ship_to_first_name] => 
+    [vads_ship_to_last_name] => 
+    [vads_ship_to_state] => 
+    [vads_ship_to_street] => 
+    [vads_ship_to_street2] => 
+    [vads_ship_to_zip] => 
+    [vads_shipping_amount] => 0
+    [vads_site_id] => 15578053
+    [vads_totalamount_vat] => 0
+    [vads_trans_date] => 20211104222449
+    [vads_trans_id] => 806897
+    [vads_url_return] => http://localhost/plugin/?wc-api=WC_Gateway_Epaync
+    [vads_validation_mode] => 
+    [vads_version] => V2
+    [vads_ext_info_order_key] => wc_order_AHfc7M3aZQsud
+    [vads_ext_info_blog_id] => 0
+)
+

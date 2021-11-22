@@ -145,58 +145,137 @@ function add_plugin_reservation_to_admin(){
   
 
   add_menu_page('Reservations', 'Reservations', 'manage_options', 'reservation-plugin', 'reservation_content');
+
+  function reservation_form() {
+
+    global $wpdb;
+
+    $table_name = $wpdb->prefix . 'posts';
+    $results = $wpdb->get_results("SELECT * FROM $table_name WHERE post_type = 'events' AND post_status = 'publish';", ARRAY_A);
+    
+    if (isset($_REQUEST['id'])) {
+      $table_name = $wpdb->prefix . 'reservations';
+      $reservation = $wpdb -> get_row($wpdb -> prepare("SELECT * FROM $table_name WHERE id = %d ", $_REQUEST ['id']));
+    }
+
+    echo "<h1>Réservation</h1>";
+    echo "<form method='POST' style='padding-top: 45px !important'>";
+    echo "<input type='text' name='first_name' placeholder='Prénom' " . (!isset($reservation) ? "" : "value='" . $reservation->first_name . "'") . " required><br>";
+    echo "<input type='text' name='last_name' placeholder='Nom de famille' " . (!isset($reservation) ? "" : "value='" . $reservation->last_name . "'") . " required><br>";
+    echo "<input type='tel' name='telephone' placeholder='Numéro de téléphone' " . (!isset($reservation) ? "" : "value='" . $reservation->telephone . "'") . " required><br>";
+    echo "<select name='name_event'>";
+    foreach ($results as $result) {
+      echo "<option value='" . $result['post_title'] . "' " . (isset($reservation) && $reservation->post_id == $result['ID'] ? "selected" : "") . ">" . $result['post_title'] . "</option>";
+    }
+    echo "<input type='submit' name='reservation' value='Envoyez'>";
+    echo "</form>";
+    echo "</div>";
+
+    if (isset($_POST['reservation'])) {
+      $first_name = sanitize_text_field($_POST['first_name']);
+      $last_name = sanitize_text_field($_POST['last_name']);
+      $name_event = sanitize_text_field($_POST['name_event']);
+      $telephone = sanitize_text_field($_POST['telephone']);
+
+
+      
+      if (!empty($first_name) && !empty($last_name) && !empty($name_event)) {
+        $table_name = $wpdb->prefix . 'reservations';
+
+      if (isset($reservation)) {
+        $wpdb->update( 
+          $table_name,
+          array( 
+            'first_name' => $first_name,
+            'last_name' => $last_name,
+            'phone' => $telephone,
+            'post_id' => $name_event,
+          ),
+          array( 
+            'id' => $reservation->id,
+          ),
+        );
+
+        echo "<h4>Réservation mise à jour.</h4>";
+
+      } else {
+
+        $wpdb->insert(
+          $table_name, array(
+            'first_name' => $first_name,
+            'last_name' => $last_name,
+            'name_event' => $name_event,
+            'telephone' => $telephone
+          )
+        );
+
+        echo 'Merci pour votre inscription !';
+      }
+
+      }
+
+    }
+
+}
+
+  add_submenu_page('reservation-plugin', 'Reservation', 'Ajouter' , 'edit_posts' , 'reservation' , 'reservation_form');
+
+
+  
+
 }
 
 add_action('admin_menu', 'add_plugin_reservation_to_admin');
 
 
-function reservation_form(){
-    ob_start();
-    global $wpdb;
+// function reservation_form(){
+//     ob_start();
+//     global $wpdb;
 
-    if (isset($_POST['reservation'])) {
-        $first_name = sanitize_text_field($_POST['first_name']);
-        $last_name = sanitize_text_field($_POST['last_name']);
-        $name_event = sanitize_text_field($_POST['name_event']);
-		$telephone = sanitize_text_field($_POST['telephone']);
+//     if (isset($_POST['reservation'])) {
+//         $first_name = sanitize_text_field($_POST['first_name']);
+//         $last_name = sanitize_text_field($_POST['last_name']);
+//         $name_event = sanitize_text_field($_POST['name_event']);
+// 		$telephone = sanitize_text_field($_POST['telephone']);
 
         
-        if (!empty($first_name) && !empty($last_name) && !empty($name_event)) {
-          $table_name = $wpdb->prefix . 'reservations';
+//         if (!empty($first_name) && !empty($last_name) && !empty($name_event)) {
+//           $table_name = $wpdb->prefix . 'reservations';
 
-          $wpdb->insert(
-            $table_name, array(
-              'first_name' => $first_name,
-              'last_name' => $last_name,
-              'name_event' => $name_event,
-			  'telephone' => $telephone
-            )
-          );
+//           $wpdb->insert(
+//             $table_name, array(
+//               'first_name' => $first_name,
+//               'last_name' => $last_name,
+//               'name_event' => $name_event,
+// 			  'telephone' => $telephone
+//             )
+//           );
 
-          echo 'Merci pour votre inscription !';
-        }
+//           echo 'Merci pour votre inscription !';
+//         }
 
-    }
+//     }
 
-    $table_name = $wpdb->prefix . 'posts';
-    $results = $wpdb->get_results("SELECT * FROM $table_name WHERE post_type = 'events' AND post_status = 'publish';", ARRAY_A);
+//     $table_name = $wpdb->prefix . 'posts';
+//     $results = $wpdb->get_results("SELECT * FROM $table_name WHERE post_type = 'events' AND post_status = 'publish';", ARRAY_A);
     
     
-    echo '<form method="POST">
-    <input type="text" name="first_name" class="form-control" placeholder="Prénom" required/>
-    <input type="text" name="last_name" class="form-control" placeholder="Nom de famille" required/>
-	<input type="text" name="telephone" class="form-control" placeholder="Télephone" required/>
-    <select name="name_event" class="form-select">
-        <option value=""> Choisir un evenement </option>'; 
-        foreach ($results as $result) {
-        echo '<option value="'. $result["post_title"] .'">'. $result["post_title"] . '</option>';
-        };
-    echo '</select>
-    <input type="submit" name="reservation" class="btn btn-primary" value="Envoyer"/>
-    </form>';
+//     echo '<form method="POST">
+//     <input type="text" name="first_name" class="form-control" placeholder="Prénom" required/>
+//     <input type="text" name="last_name" class="form-control" placeholder="Nom de famille" required/>
+// 	<input type="text" name="telephone" class="form-control" placeholder="Télephone" required/>
+//     <select name="name_event" class="form-select">
+//         <option value=""> Choisir un evenement </option>'; 
+//         foreach ($results as $result) {
+//         echo '<option value="'. $result["post_title"] .'">'. $result["post_title"] . '</option>';
+//         };
+//     echo '</select>
+//     <input type="submit" name="reservation" class="btn btn-primary" value="Envoyer"/>
+//     </form>';
 
-    return ob_get_clean();
-}
+//     return ob_get_clean();
+// }
+
 
 add_shortcode('reservation_form', 'reservation_form');
 

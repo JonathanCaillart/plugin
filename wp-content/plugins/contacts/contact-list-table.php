@@ -7,6 +7,8 @@ class ContactListTable extends WP_List_Table {
 		return $wpdb->get_results("SELECT * FROM $table_name", ARRAY_A);
 	}
 
+
+
 	function get_columns() {
 		return array(
 			'id' => 'ID',
