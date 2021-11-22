@@ -8,12 +8,12 @@ Le terme administrateur est utilisé pour décrire la personne qui utilisera la 
 
 
 *User Story* 
-- En tant qu'utilistateur veut pouvoir naviguer sur le site depuis mon téléphone
-- En tant qu'utilisateur je veut pouvoir reserver ma séance de sport à l'avance
-- En tant qu'utilisateur je veut pouvoir être informer sur la salle de sport avec des photos et des textes
-- En tant qu'utilisateur je veut pouvoir contacter la salle de sport grace à un formulaire de contact 
-- En tant qu'administrateur je veut pouvoir gérer les réservation faites par les utilisateur ou en ajouter une moi même
-- En tant qu'administrateur je veut pouvoir créer des séances de sport
+- En tant qu'utilistateur veut pouvoir naviguer sur le site depuis mon téléphone afin de le consulter depuis une plateforme mobile
+- En tant qu'utilisateur je veut pouvoir reserver ma séance de sport à l'avance afin de gagner du temps
+- En tant qu'utilisateur je veut pouvoir être informer sur la salle de sport avec des photos et des textes afin d'être mieux renseigné
+- En tant qu'utilisateur je veut pouvoir contacter la salle de sport grace à un formulaire de contact afin d'obtenir des renseignement supplémentaire
+- En tant qu'administrateur je veut pouvoir gérer les réservation faites par les utilisateur ou en ajouter une moi même afin de gerer les client
+- En tant qu'administrateur je veut pouvoir créer des séances de sport afin de les mettres a disposition des clients
 
 
 *Contrainte technique*
