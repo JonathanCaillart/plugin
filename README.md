@@ -8,7 +8,7 @@ Le terme administrateur est utilisé pour décrire la personne qui utilisera la 
 
 
 *User Story* 
-- En tant qu'utilistateur veut pouvoir naviguer sur le site depuis mon téléphone afin de le consulter depuis une plateforme mobile
+- En tant qu'utilisateur je veut pouvoir naviguer sur le site depuis mon téléphone afin de le consulter depuis une plateforme mobile
 - En tant qu'utilisateur je veut pouvoir reserver ma séance de sport à l'avance afin de gagner du temps
 - En tant qu'utilisateur je veut pouvoir être informer sur la salle de sport avec des photos et des textes afin d'être mieux renseigné
 - En tant qu'utilisateur je veut pouvoir contacter la salle de sport grace à un formulaire de contact afin d'obtenir des renseignements supplémentaire
@@ -26,7 +26,7 @@ Le terme administrateur est utilisé pour décrire la personne qui utilisera la 
 
 *Spécificication technique*
 - Le CMS Wordpress sera utilisé pour développer le site
-- Une base de donnée permettant l'ajout de reservation sera créer
-- Les fonctionalitées du site seront développer en PHP/HTML
+- Une base de donnée permettant l'ajout de reservation sera créé
+- Les fonctionalitées du site seront développé en PHP/HTML
 - Un plugin sera crée pour livrer la partie administration
 
